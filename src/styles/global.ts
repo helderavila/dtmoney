@@ -46,7 +46,7 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 600;
   }
 
-  body {
+  button {
     cursor: pointer;
   }
 
