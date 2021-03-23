@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import { TransactionsProvider } from './hooks/useTransactions';
 // Libs
 import Modal from 'react-modal'
 
@@ -25,11 +25,11 @@ export function App() {
     setIsNewTransactionModalOpen(false)
   }
   return (
-    <>
+    <TransactionsProvider>
       <Header onOpenNewTransactionModal={handleOpenNewTransactionModal}/>
       <Dashboard />
       <NewTransactionModal isOpen={isNewTransactionModalOpen} onRequestClose={handleCloseNewTransactionModal}/>
       <GlobalStyle />
-    </>
+    </TransactionsProvider>
   )
 }
